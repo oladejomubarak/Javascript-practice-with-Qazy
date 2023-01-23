@@ -193,19 +193,22 @@
 // const clearGameDiv = document.getElementById('clear-game')
 // clearGameDiv.onclick=()=> clearGameScore()
 
-const randomFruits = (fruits)=>{
-  const randomNumber = Math.floor(Math.random()) * fruits.length
+// const randomFruits = (fruits)=>{
+//   const randomNumber = Math.floor(Math.random()) * fruits.length
 
-  console.log(randomNumber)
-  return fruits[randomNumber]
-}
+//   console.log(randomNumber)
+//   return fruits[randomNumber]
+// }
 
-fruits = ["apple", "pineaple", "orange", "pawpaw", "banana" ]
+// fruits = ["apple", "pineaple", "orange", "pawpaw", "banana" ]
 
-console.log(randomFruits(fruits))
+// console.log(randomFruits(fruits))
 
 document.addEventListener("keydown", function(e){
   if(e.key == "q"){
-    console.log("you pre")
+    console.log("you pressed Q")
+  }
+  else{
+    console.log("not Q")
   }
 })
