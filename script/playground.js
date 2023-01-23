@@ -154,38 +154,58 @@
 
 // console.log(sum)
 
-let titleDiv = document.getElementById("tit")
-let message = "hello, my man"
-console.log(titleDiv.innerText)
-titleDiv.innerText = message
-console.log(titleDiv.innerText)
-titleDiv.innerHTML = `<p>${message}</p>`
-// titleDiv.innerHTML = message
-titleDiv.style.color = green
-let redDiv = document.getElementById("red")
-let yellowDiv = document.getElementById("yellow")
-let greenDiv = document.getElementById("green")
-redDiv.onclick = () => console.log("red")
-yellowDiv.onclick = () => console.log("yellow")
-greenDiv.onclick = () => console.log("green")
 
-const squares = document.querySelectorAll('.colorSquare')
-console.log(squares)
-let timeClicked = {'red': 0, 'yellow': 0, 'green': 0}
-squares.forEach(square => {
- square.onclick = () =>{ 
-  timeClicked[square.value]+=1
-  square.innerText= timeClicked[square.value]
-  // console.log(square.value)
+
+
+// let titleDiv = document.getElementById("tit")
+// let message = "hello, my man"
+// console.log(titleDiv.innerText)
+// titleDiv.innerText = message
+// console.log(titleDiv.innerText)
+// titleDiv.innerHTML = `<p>${message}</p>`
+// // titleDiv.innerHTML = message
+// titleDiv.style.color = green
+// let redDiv = document.getElementById("red")
+// let yellowDiv = document.getElementById("yellow")
+// let greenDiv = document.getElementById("green")
+// redDiv.onclick = () => console.log("red")
+// yellowDiv.onclick = () => console.log("yellow")
+// greenDiv.onclick = () => console.log("green")
+
+// const squares = document.querySelectorAll('.colorSquare')
+// console.log(squares)
+// let timeClicked = {'red': 0, 'yellow': 0, 'green': 0}
+// squares.forEach(square => {
+//  square.onclick = () =>{ 
+//   timeClicked[square.value]+=1
+//   square.innerText= timeClicked[square.value]
+//   // console.log(square.value)
+// }
+// })
+
+// function clearGameScore (){
+//   timeClicked.red = 0
+//   timeClicked.yellow= 0
+//   timeClicked.green = 0
+//   squares.forEach(square => {
+//     square.innerText=''})
+// }
+// const clearGameDiv = document.getElementById('clear-game')
+// clearGameDiv.onclick=()=> clearGameScore()
+
+const randomFruits = (fruits)=>{
+  const randomNumber = Math.floor(Math.random()) * fruits.length
+
+  console.log(randomNumber)
+  return fruits[randomNumber]
 }
+
+fruits = ["apple", "pineaple", "orange", "pawpaw", "banana" ]
+
+console.log(randomFruits(fruits))
+
+document.addEventListener("keydown", function(e){
+  if(e.key == "q"){
+    console.log("you pre")
+  }
 })
-
-function clearGameScore (){
-  timeClicked.red = 0
-  timeClicked.yellow= 0
-  timeClicked.green = 0
-  squares.forEach(square => {
-    square.innerText=''})
-}
-const clearGameDiv = document.getElementById('clear-game')
-clearGameDiv.onclick=()=> clearGameScore()
